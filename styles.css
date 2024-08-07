@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+    weight: bold;
+  }
+  @font-face {
+    font-family: 'Inter bold';
+    src: url(assets/fonts/static/Inter-Bold.ttf);
+    weight: normal;
+  }
+
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(36, 100%, 99%);
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
+    width: 1090px;
+  }
+
+  header{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    width: 1090px;
+
+        img{
+            transform: scale(1.2);
+        }
+  }
+
+  nav a:hover{
+    color: hsl(35, 77%, 62%);
+  }
+
+  .top{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .top-left{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    flex-basis: 62%;
+  }
+
+  #bg-hero{
+    height: 350px;
+    width: 670px;
+  }
+  nav a{
+    font-family: 'Inter';
+    margin-right: 2rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: grey;
+  }
+  #cat{
+    margin: 0;
+  }
+
+  .top-right{
+    width: 370px;
+    padding: 2rem;
+    color: hsl(35, 77%, 62%);
+    background-color: black;
+    font-family: 'Inter';
+
+    h1{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .h2{
+        color: white;
+        margin-block: 2rem;
+    }
+    .p{
+        color: grey;
+        margin-bottom: 1rem;
+    }
+    
+  }
+  .bottom{
+    display: flex;
+
+    margin-block: 5rem;
+
+  }
+
+  .thumb{
+    display: flex;
+    flex: 1;
+
+  }
+
+  .b-img{
+    height: 130px;
+    width: 100px;
+  }
+
+  .main-text{
+    display: flex;
+
+    h1{ 
+        font-family: 'Inter bold';
+        padding-block: 2.5rem;
+        padding-right: 1rem;
+        font-size: 3rem;
+        flex-basis: 50%;
+    }
+  }
+
+  .text{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1rem;
+    font-family: 'Inter';
+  }
+
+  .t-h2{
+    font-size: 2rem;
+    color: hsl(5, 85%, 63%);
+  }
+  .t-p{
+    color: grey;
+    margin-top: .5rem;
+  }
+  .t-h3{
+    margin-top: .5rem;
+  }
+
+
+  .read-more{
+    padding-top: 2rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    font-family: 'Inter';
+    flex-basis: 50%;
+    color: grey;
+    line-height: 1.5rem;
+
+    button{
+        font-family: 'Inter bold';
+        margin-top: 1rem;
+        height: 3rem;
+        width: 10rem;
+        background-color: black;
+        color: white;
+        border: none;
+    }
+    button:hover{
+      cursor: pointer;
+      color: hsl(5, 85%, 63%);
+    }
+  }
+
+  #menu{
+    display: none;
+  }
+  nav img{
+    display: none;
+  }
+
+
+  @media screen and (max-width:1100px) {
+
+    main,header{
+        width: 400px;
+    }
+
+    #bg-hero{
+        height: 200px;
+        width: 400px;
+
+    }
+
+    .main-text h1{
+        padding-bottom: 0;
+    }
+
+    #menu{
+        display: block;
+    }
+    #menu:hover,#close:hover,button{
+      cursor: pointer;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .read-more button{
+        margin-bottom: 3rem;
+        height: 3.5rem;
+        width: 14rem;
+        background-color: hsl(5, 85%, 63%);
+        color: black;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    button:hover{
+      background-color: black;
+      color: hsl(5, 85%, 63%);;
+    }
+
+    .top{
+        flex-direction: column;
+    }
+    .main-text{
+        flex-direction: column;
+    }
+
+    .bottom{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .thumb{
+        margin-bottom: 2rem;
+    }
+
+    nav{
+      position: absolute;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      top: 0;
+      right: 0;
+      height: 100dvh;
+      width: 65%;
+      padding-block-start: 6rem;
+      padding-inline: clamp(1rem, 10vw, 2rem);
+      display: none;
+      
+      a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        margin-bottom: 2rem;
+        font-weight: 600;
+        display: block;
+      }
+      img{
+        position: absolute;
+        display: block;
+        top: 5%;
+        right: 10%;
+      }
+
+    }
+
+    #a{
+      margin-top: 5rem;
+    }
+
+    #backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none; 
+  }
+    
+  }
+  
+
+  
+
+
